@@ -215,7 +215,7 @@ throwaway change first. Nothing goes live without your tap."
 
 <span class="eyebrow">🔴 라이브 데모</span>
 
-## 휴대폰에서, Google Chat으로.
+## 휴대폰에서, Zalo로.
 
 <p class="muted">메시지 하나 → 승인할 계획 → 미리보기 링크. 1분 이내.</p>
 
@@ -223,7 +223,7 @@ throwaway change first. Nothing goes live without your tap."
 <div>
   <div class="phone">
     <div class="screen">
-      <div class="gc-head"><img src="assets/robot.svg"><div><div class="nm">Rio</div><div class="st">Google Chat에서 활성</div></div></div>
+      <div class="gc-head"><img src="assets/robot.svg"><div><div class="nm">Rio</div><div class="st">Zalo에서 활성</div></div></div>
       <div class="gc-body">
         <div class="gc-day">오늘</div>
         <div class="bub out">‘가입’ 버튼을 초록색으로, 조금 더 크게 해줘 🙏</div>
