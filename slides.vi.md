@@ -25,12 +25,12 @@ view only); comments starting with `_class:` are Marp layout directives.
 <div class="title-row">
   <img src="assets/robot.svg" alt="Rio">
   <div>
-    <div class="brand-row"><span class="brand">Rio</span><span class="eyebrow">Kỹ sư bảo trì phần mềm AI</span></div>
+    <div class="brand-row"><span class="brand">Josie</span><span class="eyebrow">Kỹ sư bảo trì phần mềm AI</span></div>
     <h1>Nhắn một câu.<br><em>Phần mềm của bạn được ship.</em></h1>
   </div>
 </div>
 
-<p class="sub">Kỹ sư AI bảo trì codebase của bạn <strong>ngay cả khi bạn ngủ</strong> — tất cả từ điện thoại. Bạn gõ yêu cầu, <strong>bạn duyệt</strong>, Rio ship.</p>
+<p class="sub">Kỹ sư AI bảo trì codebase của bạn <strong>ngay cả khi bạn ngủ</strong> — tất cả từ điện thoại. Bạn gõ yêu cầu, <strong>bạn duyệt</strong>, Josie ship.</p>
 
 <p class="url">https://rio.sotatek.kr</p>
 
