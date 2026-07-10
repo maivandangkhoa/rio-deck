@@ -1,0 +1,17 @@
+{
+  "name": "rio-deck",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Rio — customer pitch deck (Marp). 10-minute, multi-prospect webinar.",
+  "scripts": {
+    "html": "marp slides.md -o dist/rio-deck.html --html --theme-set theme/rio.css --allow-local-files",
+    "pdf": "marp slides.md -o dist/rio-deck.pdf --pdf --theme-set theme/rio.css --allow-local-files",
+    "pptx": "marp slides.md -o dist/rio-deck.pptx --pptx --theme-set theme/rio.css --allow-local-files",
+    "watch": "marp slides.md -o dist/rio-deck.html --html --theme-set theme/rio.css --allow-local-files --watch",
+    "serve": "marp -s . --html --theme-set theme/rio.css --allow-local-files",
+    "build": "npm run html && npm run pdf"
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "^3.4.0"
+  }
+}
