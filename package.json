@@ -9,7 +9,8 @@
     "pptx": "marp slides.md -o dist/rio-deck.pptx --pptx --theme-set theme/rio.css --allow-local-files",
     "watch": "marp slides.md -o dist/rio-deck.html --html --theme-set theme/rio.css --allow-local-files --watch",
     "serve": "marp -s . --html --theme-set theme/rio.css --allow-local-files",
-    "build": "npm run html && npm run pdf"
+    "build": "npm run html && npm run pdf",
+    "site": "marp slides.md -o _site/index.html --html --theme-set theme/rio.css --allow-local-files && marp slides.vi.md -o _site/vi.html --html --theme-set theme/rio.css --allow-local-files && marp slides.ko.md -o _site/ko.html --html --theme-set theme/rio.css --allow-local-files && cp -r assets _site/assets"
   },
   "devDependencies": {
     "@marp-team/marp-cli": "^3.4.0"

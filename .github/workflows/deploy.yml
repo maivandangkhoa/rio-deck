@@ -1,0 +1,52 @@
+name: Deploy deck to GitHub Pages
+
+# main  -> https://maivandangkhoa.github.io/rio-deck/        (production)
+# dev   -> https://maivandangkhoa.github.io/rio-deck/dev/    (dev preview)
+on:
+  push:
+    branches: [main, dev]
+
+permissions:
+  contents: write   # peaceiris pushes the built site to the gh-pages branch
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Build site (index/vi/ko + assets)
+        run: npm run site
+
+      # main -> site root, dev -> /dev subfolder. Same gh-pages branch.
+      - name: Set target folder
+        id: target
+        run: |
+          if [ "${{ github.ref_name }}" = "main" ]; then
+            echo "dir=." >> "$GITHUB_OUTPUT"
+          else
+            echo "dir=dev" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          destination_dir: ${{ steps.target.outputs.dir }}
+          keep_files: true   # don't wipe the other environment's folder
+          user_name: github-actions[bot]
+          user_email: github-actions[bot]@users.noreply.github.com
+          commit_message: "Deploy ${{ github.ref_name }} @ ${{ github.sha }}"
