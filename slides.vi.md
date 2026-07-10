@@ -215,7 +215,7 @@ throwaway change first. Nothing goes live without your tap."
 
 <span class="eyebrow">🔴 Demo trực tiếp</span>
 
-## Từ điện thoại, trong Zalo.
+## Từ điện thoại, trong Google Chat.
 
 <p class="muted">Một tin nhắn → kế hoạch bạn duyệt → link xem thử. Chưa tới một phút.</p>
 
@@ -223,7 +223,7 @@ throwaway change first. Nothing goes live without your tap."
 <div>
   <div class="phone">
     <div class="screen">
-      <div class="gc-head"><img src="assets/robot.svg"><div><div class="nm">Rio</div><div class="st">Đang hoạt động trong Zalo</div></div></div>
+      <div class="gc-head"><img src="assets/robot.svg"><div><div class="nm">Rio</div><div class="st">Đang hoạt động trong Google Chat</div></div></div>
       <div class="gc-body">
         <div class="gc-day">Hôm nay</div>
         <div class="bub out">Cho nút “Đăng ký” màu xanh và to hơn chút nhé 🙏</div>

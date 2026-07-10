@@ -215,7 +215,7 @@ throwaway change first. Nothing goes live without your tap."
 
 <span class="eyebrow">🔴 Live demo</span>
 
-## From a phone, in Zalo.
+## From a phone, in Google Chat.
 
 <p class="muted">One message → a plan you approve → a preview link. Under a minute.</p>
 
@@ -223,7 +223,7 @@ throwaway change first. Nothing goes live without your tap."
 <div>
   <div class="phone">
     <div class="screen">
-      <div class="gc-head"><img src="assets/robot.svg"><div><div class="nm">Rio</div><div class="st">Active in Zalo</div></div></div>
+      <div class="gc-head"><img src="assets/robot.svg"><div><div class="nm">Rio</div><div class="st">Active in Google Chat</div></div></div>
       <div class="gc-body">
         <div class="gc-day">Today</div>
         <div class="bub out">Make the “Sign up” button green and a bit bigger 🙏</div>
