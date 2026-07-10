@@ -9,9 +9,10 @@ on:
 permissions:
   contents: write   # peaceiris pushes the built site to the gh-pages branch
 
+# Shared group so main & dev never push to gh-pages at the same time.
 concurrency:
-  group: pages-${{ github.ref }}
-  cancel-in-progress: true
+  group: gh-pages-deploy
+  cancel-in-progress: false
 
 jobs:
   deploy:
