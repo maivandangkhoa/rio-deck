@@ -25,7 +25,7 @@ view only); comments starting with `_class:` are Marp layout directives.
 <div class="title-row">
   <img src="assets/robot.svg" alt="Rio">
   <div>
-    <div class="brand-row"><span class="brand">Josie</span><span class="eyebrow">AI maintenance engineer</span></div>
+    <div class="brand-row"><span class="brand">Rio</span><span class="eyebrow">AI maintenance engineer</span></div>
     <h1>Message once.<br><em>Your software ships.</em></h1>
   </div>
 </div>
