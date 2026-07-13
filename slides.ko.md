@@ -106,9 +106,11 @@ that maintains your product, with you in charge." Say the tagline out loud.
   <div class="arrow">→</div>
   <div class="node"><div class="dot">5</div><div class="lb">테스트 + 미리보기</div></div>
   <div class="arrow">→</div>
-  <div class="node gate"><div class="dot">6</div><div class="lb">병합 승인</div><div class="who">⏸ 관리자</div></div>
+  <div class="node gate"><div class="dot">6</div><div class="lb">미리보기 승인</div><div class="who">⏸ 당신</div></div>
   <div class="arrow">→</div>
-  <div class="node"><div class="dot">7</div><div class="lb">배포 + 보고</div></div>
+  <div class="node gate"><div class="dot">7</div><div class="lb">병합 승인</div><div class="who">⏸ 관리자</div></div>
+  <div class="arrow">→</div>
+  <div class="node"><div class="dot">8</div><div class="lb">배포 + 보고</div></div>
 </div>
 
 <!--
@@ -119,7 +121,7 @@ That contrast is the whole story.
 
 ---
 
-<span class="eyebrow">두 관문 = 당신의 통제권</span>
+<span class="eyebrow">세 관문 = 당신의 통제권</span>
 
 ## Rio는 절대 무단으로 배포하지 않습니다.
 
@@ -130,7 +132,12 @@ That contrast is the whole story.
     <p>Rio가 한 줄이라도 쓰기 전에 <em>무엇을</em> <em>왜</em> 하는지 봅니다. “ok”라고 답하거나 수정하세요.</p>
   </div>
   <div class="gatecard">
-    <div class="g">⏸ 관문 2 · 관리자</div>
+    <div class="g">⏸ 관문 2 · 당신</div>
+    <h3>당신이 미리보기를 승인</h3>
+    <p>Rio는 먼저 <code>dev</code>에 배포합니다. 미리보기 링크를 열어 맞는지 확인한 뒤 다음 단계로 넘어갑니다.</p>
+  </div>
+  <div class="gatecard">
+    <div class="g">⏸ 관문 3 · 관리자</div>
     <h3>관리자가 병합을 승인</h3>
     <p>권한 있는 사람만 마지막 버튼을 누릅니다. 그 외 누구도 <code>main</code>을 건드리지 않습니다.</p>
   </div>
@@ -149,7 +156,7 @@ slowly and literally. Pause. Then move into why teams trust it.
 ## 제멋대로인 봇이 아닙니다.
 
 <div class="tiles">
-  <div class="tile g"><div class="ic">⏸</div><h3>두 승인 관문</h3><p>계획 + 병합, 생략 없음.</p></div>
+  <div class="tile g"><div class="ic">⏸</div><h3>세 승인 관문</h3><p>계획 + 미리보기 + 병합, 생략 없음.</p></div>
   <div class="tile"><div class="ic">◇</div><h3>당신의 저장소</h3><p>안전한 GitHub App — 코드는 벗어나지 않음.</p></div>
   <div class="tile"><div class="ic">◷</div><h3>24/7, 대기 없음</h3><p>티켓도 회의도 없음.</p></div>
   <div class="tile"><div class="ic">⌥</div><h3>안전한 dev 브랜치</h3><p>운영 전에 테스트 & 미리보기.</p></div>

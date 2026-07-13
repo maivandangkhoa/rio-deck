@@ -106,20 +106,22 @@ that maintains your product, with you in charge." Say the tagline out loud.
   <div class="arrow">→</div>
   <div class="node"><div class="dot">5</div><div class="lb">Test + preview</div></div>
   <div class="arrow">→</div>
-  <div class="node gate"><div class="dot">6</div><div class="lb">Approve merge</div><div class="who">⏸ MANAGER</div></div>
+  <div class="node gate"><div class="dot">6</div><div class="lb">Approve preview</div><div class="who">⏸ YOU</div></div>
   <div class="arrow">→</div>
-  <div class="node"><div class="dot">7</div><div class="lb">Ship + report</div></div>
+  <div class="node gate"><div class="dot">7</div><div class="lb">Approve merge</div><div class="who">⏸ MANAGER</div></div>
+  <div class="arrow">→</div>
+  <div class="node"><div class="dot">8</div><div class="lb">Ship + report</div></div>
 </div>
 
 <!--
 ⏱ 3:00–4:30 — THE FLOW
-Don't narrate all 7. "Five are automatic. Two are yours" — point at 3 and 6.
-That contrast is the whole story.
+Don't narrate all 8. "Five are automatic. Two are yours" — point at 3 and 6
+(your gates), 7 is your manager's. That contrast is the whole story.
 -->
 
 ---
 
-<span class="eyebrow">The two gates = your control</span>
+<span class="eyebrow">The three gates = your control</span>
 
 ## Rio never ships unattended. Ever.
 
@@ -130,7 +132,12 @@ That contrast is the whole story.
     <p>Before Rio writes a single line, you see <em>what</em> it will do and <em>why</em>. Reply “ok”, or refine it.</p>
   </div>
   <div class="gatecard">
-    <div class="g">⏸ GATE 2 · MANAGER</div>
+    <div class="g">⏸ GATE 2 · YOU</div>
+    <h3>You approve the dev preview</h3>
+    <p>Rio ships to <code>dev</code> first. You open the preview link and confirm it’s right before anything goes further.</p>
+  </div>
+  <div class="gatecard">
+    <div class="g">⏸ GATE 3 · MANAGER</div>
     <h3>A manager approves the merge</h3>
     <p>Only an authorised person clicks the final button. No one else ever touches <code>main</code>.</p>
   </div>
@@ -149,7 +156,7 @@ slowly and literally. Pause. Then move into why teams trust it.
 ## Not a bot on the loose.
 
 <div class="tiles">
-  <div class="tile g"><div class="ic">⏸</div><h3>Two approval gates</h3><p>Plan + merge, never skipped.</p></div>
+  <div class="tile g"><div class="ic">⏸</div><h3>Three approval gates</h3><p>Plan + preview + merge, never skipped.</p></div>
   <div class="tile"><div class="ic">◇</div><h3>Your own repo</h3><p>Secure GitHub App — code never leaves it.</p></div>
   <div class="tile"><div class="ic">◷</div><h3>24/7, no queue</h3><p>No tickets, no meetings.</p></div>
   <div class="tile"><div class="ic">⌥</div><h3>Safe dev branch</h3><p>Tested &amp; previewed before production.</p></div>
