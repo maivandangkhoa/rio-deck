@@ -292,6 +292,8 @@ here instead. Narrate the two gates — then go straight to the closing ask.
 
 <p class="url">https://rio.sotatek.kr</p>
 
+<p class="thanks">Cảm ơn bạn đã lắng nghe 🙏</p>
+
 <!--
 ⏱ 9:15–10:00 — CLOSE WITH THE ASK
 One clear next step for the whole room: "Drop your email / scan this — we'll
