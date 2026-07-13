@@ -25,7 +25,7 @@ view only); comments starting with `_class:` are Marp layout directives.
 <div class="title-row">
   <img src="assets/robot.svg" alt="Rio">
   <div>
-    <div class="brand-row"><span class="brand">Rio</span><span class="eyebrow">Kỹ sư bảo trì phần mềm AI</span></div>
+    <div class="brand-row"><span class="brand">Josie</span><span class="eyebrow">Kỹ sư bảo trì phần mềm AI</span></div>
     <h1>Nhắn một câu.<br><em>Phần mềm của bạn được ship.</em></h1>
   </div>
 </div>
