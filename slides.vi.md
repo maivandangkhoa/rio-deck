@@ -237,7 +237,11 @@ throwaway change first. Nothing goes live without your tap."
         <div class="bub in"><div class="who">Rio</div>Rõ rồi — CTA sang xanh thương hiệu, to hơn. Đây là kế hoạch — duyệt trước khi tôi ship nhé?</div>
         <div class="approve">⏸ Duyệt kế hoạch</div>
         <div class="bub out">ok, làm luôn đi ✅</div>
-        <div class="bub in"><div class="who">Rio</div>Xong trên <b>dev</b>, test pass. Bản xem thử sẵn sàng 🚀</div>
+        <div class="bub in"><div class="who">Rio</div>Xong trên <b>dev</b>, test pass. Bản xem thử sẵn sàng 🚀 — duyệt nhé?</div>
+        <div class="approve">⏸ Duyệt bản xem thử</div>
+        <div class="bub in"><div class="who">Rio</div>Đã duyệt. Gửi quản lý để merge vào <b>main</b>.</div>
+        <div class="approve mgr">⏸ Duyệt merge · Quản lý</div>
+        <div class="bub in"><div class="who">Rio</div>Đã merge vào <b>main</b>. Đang chạy 🎉</div>
       </div>
     </div>
   </div>

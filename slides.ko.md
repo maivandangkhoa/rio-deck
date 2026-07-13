@@ -237,7 +237,11 @@ throwaway change first. Nothing goes live without your tap."
         <div class="bub in"><div class="who">Rio</div>알겠어요 — CTA를 브랜드 초록색으로, 더 크게. 계획입니다 — 배포 전에 승인해 주실래요?</div>
         <div class="approve">⏸ 계획 승인</div>
         <div class="bub out">네, 진행하세요 ✅</div>
-        <div class="bub in"><div class="who">Rio</div><b>dev</b>에 완료, 테스트 통과. 미리보기 준비됐어요 🚀</div>
+        <div class="bub in"><div class="who">Rio</div><b>dev</b>에 완료, 테스트 통과. 미리보기 준비됐어요 🚀 — 승인해 주실래요?</div>
+        <div class="approve">⏸ 미리보기 승인</div>
+        <div class="bub in"><div class="who">Rio</div>승인됨. <b>main</b> 병합을 위해 관리자에게 보냈어요.</div>
+        <div class="approve mgr">⏸ 병합 승인 · 관리자</div>
+        <div class="bub in"><div class="who">Rio</div><b>main</b>에 병합. 라이브 됐어요 🎉</div>
       </div>
     </div>
   </div>

@@ -237,7 +237,11 @@ throwaway change first. Nothing goes live without your tap."
         <div class="bub in"><div class="who">Rio</div>Got it — CTA to brand green, larger. Here’s the plan — approve before I ship?</div>
         <div class="approve">⏸ Approve plan</div>
         <div class="bub out">ok, go ahead ✅</div>
-        <div class="bub in"><div class="who">Rio</div>Done on <b>dev</b>, tests passing. Preview ready 🚀</div>
+        <div class="bub in"><div class="who">Rio</div>Done on <b>dev</b>, tests passing. Preview ready 🚀 — approve it?</div>
+        <div class="approve">⏸ Approve preview</div>
+        <div class="bub in"><div class="who">Rio</div>Approved. Sent to your manager to merge into <b>main</b>.</div>
+        <div class="approve mgr">⏸ Approve merge · Manager</div>
+        <div class="bub in"><div class="who">Rio</div>Merged to <b>main</b>. Live now 🎉</div>
       </div>
     </div>
   </div>
