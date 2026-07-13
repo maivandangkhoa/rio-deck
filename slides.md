@@ -106,20 +106,22 @@ that maintains your product, with you in charge." Say the tagline out loud.
   <div class="arrow">→</div>
   <div class="node"><div class="dot">5</div><div class="lb">Test + preview</div></div>
   <div class="arrow">→</div>
-  <div class="node gate"><div class="dot">6</div><div class="lb">Approve merge</div><div class="who">⏸ MANAGER</div></div>
+  <div class="node gate"><div class="dot">6</div><div class="lb">Approve preview</div><div class="who">⏸ YOU</div></div>
   <div class="arrow">→</div>
-  <div class="node"><div class="dot">7</div><div class="lb">Ship + report</div></div>
+  <div class="node gate"><div class="dot">7</div><div class="lb">Approve merge</div><div class="who">⏸ MANAGER</div></div>
+  <div class="arrow">→</div>
+  <div class="node"><div class="dot">8</div><div class="lb">Ship + report</div></div>
 </div>
 
 <!--
 ⏱ 3:00–4:30 — THE FLOW
-Don't narrate all 7. "Five are automatic. Two are yours" — point at 3 and 6.
-That contrast is the whole story.
+Don't narrate all 8. "Five are automatic. Two are yours" — point at 3 and 6
+(your gates), 7 is your manager's. That contrast is the whole story.
 -->
 
 ---
 
-<span class="eyebrow">The two gates = your control</span>
+<span class="eyebrow">The three gates = your control</span>
 
 ## Rio never ships unattended. Ever.
 
@@ -130,7 +132,12 @@ That contrast is the whole story.
     <p>Before Rio writes a single line, you see <em>what</em> it will do and <em>why</em>. Reply “ok”, or refine it.</p>
   </div>
   <div class="gatecard">
-    <div class="g">⏸ GATE 2 · MANAGER</div>
+    <div class="g">⏸ GATE 2 · YOU</div>
+    <h3>You approve the dev preview</h3>
+    <p>Rio ships to <code>dev</code> first. You open the preview link and confirm it’s right before anything goes further.</p>
+  </div>
+  <div class="gatecard">
+    <div class="g">⏸ GATE 3 · MANAGER</div>
     <h3>A manager approves the merge</h3>
     <p>Only an authorised person clicks the final button. No one else ever touches <code>main</code>.</p>
   </div>
@@ -149,7 +156,7 @@ slowly and literally. Pause. Then move into why teams trust it.
 ## Not a bot on the loose.
 
 <div class="tiles">
-  <div class="tile g"><div class="ic">⏸</div><h3>Two approval gates</h3><p>Plan + merge, never skipped.</p></div>
+  <div class="tile g"><div class="ic">⏸</div><h3>Three approval gates</h3><p>Plan + preview + merge, never skipped.</p></div>
   <div class="tile"><div class="ic">◇</div><h3>Your own repo</h3><p>Secure GitHub App — code never leaves it.</p></div>
   <div class="tile"><div class="ic">◷</div><h3>24/7, no queue</h3><p>No tickets, no meetings.</p></div>
   <div class="tile"><div class="ic">⌥</div><h3>Safe dev branch</h3><p>Tested &amp; previewed before production.</p></div>
@@ -230,12 +237,43 @@ throwaway change first. Nothing goes live without your tap."
         <div class="bub in"><div class="who">Rio</div>Got it — CTA to brand green, larger. Here’s the plan — approve before I ship?</div>
         <div class="approve">⏸ Approve plan</div>
         <div class="bub out">ok, go ahead ✅</div>
-        <div class="bub in"><div class="who">Rio</div>Done on <b>dev</b>, tests passing. Preview ready 🚀</div>
+        <div class="bub in"><div class="who">Rio</div>Done on <b>dev</b>, tests passing. Preview ready 🚀 — approve it?</div>
+        <div class="approve">⏸ Approve preview</div>
+        <div class="bub in"><div class="who">Rio</div>Approved. Sent to your manager to merge into <b>main</b>.</div>
+        <div class="approve mgr">⏸ Approve merge · Manager</div>
+        <div class="bub in"><div class="who">Rio</div>Merged to <b>main</b>. Live now 🎉</div>
       </div>
     </div>
   </div>
 </div>
 </div>
+
+<script>
+/* Replays the chat animation each time the demo slide becomes active.
+   Marp scopes theme CSS under <section>, but bespoke's active class sits on the
+   ancestor <svg> — unreachable from CSS. So we toggle .is-playing on .gc-body
+   (inside the section) instead, which restarts the staggered CSS animation. */
+(function(){
+  function play(svg){
+    var b = svg.querySelector('.gc-body'); if(!b) return;
+    b.classList.remove('is-playing'); void b.offsetWidth; b.classList.add('is-playing');
+  }
+  function handle(svg){
+    var on = svg.classList.contains('bespoke-marp-active');
+    if(on && svg.querySelector('.gc-body') && !svg._rioOn){ svg._rioOn = 1; play(svg); }
+    else if(!on){ svg._rioOn = 0; }
+  }
+  function init(){
+    document.querySelectorAll('svg.bespoke-marp-slide').forEach(function(svg){
+      new MutationObserver(function(){ handle(svg); })
+        .observe(svg, { attributes:true, attributeFilter:['class'] });
+      handle(svg);
+    });
+  }
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else setTimeout(init, 0);
+})();
+</script>
 
 <!--
 ⏱ 7:30–9:15 — LIVE DEMO (the finale, right before the ask)

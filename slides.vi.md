@@ -106,9 +106,11 @@ that maintains your product, with you in charge." Say the tagline out loud.
   <div class="arrow">→</div>
   <div class="node"><div class="dot">5</div><div class="lb">Test + xem thử</div></div>
   <div class="arrow">→</div>
-  <div class="node gate"><div class="dot">6</div><div class="lb">Duyệt merge</div><div class="who">⏸ QUẢN LÝ</div></div>
+  <div class="node gate"><div class="dot">6</div><div class="lb">Duyệt bản xem thử</div><div class="who">⏸ BẠN</div></div>
   <div class="arrow">→</div>
-  <div class="node"><div class="dot">7</div><div class="lb">Ship + báo cáo</div></div>
+  <div class="node gate"><div class="dot">7</div><div class="lb">Duyệt merge</div><div class="who">⏸ QUẢN LÝ</div></div>
+  <div class="arrow">→</div>
+  <div class="node"><div class="dot">8</div><div class="lb">Ship + báo cáo</div></div>
 </div>
 
 <!--
@@ -119,7 +121,7 @@ That contrast is the whole story.
 
 ---
 
-<span class="eyebrow">Hai cổng duyệt = quyền kiểm soát</span>
+<span class="eyebrow">Ba cổng duyệt = quyền kiểm soát</span>
 
 ## Rio không bao giờ tự ý ship. Không bao giờ.
 
@@ -130,7 +132,12 @@ That contrast is the whole story.
     <p>Trước khi Rio viết một dòng, bạn thấy nó sẽ làm <em>gì</em> và <em>vì sao</em>. Trả lời “ok”, hoặc chỉnh lại.</p>
   </div>
   <div class="gatecard">
-    <div class="g">⏸ CỔNG 2 · QUẢN LÝ</div>
+    <div class="g">⏸ CỔNG 2 · BẠN</div>
+    <h3>Bạn duyệt bản xem thử</h3>
+    <p>Rio ship lên <code>dev</code> trước. Bạn mở link xem thử và xác nhận đúng ý trước khi đi tiếp.</p>
+  </div>
+  <div class="gatecard">
+    <div class="g">⏸ CỔNG 3 · QUẢN LÝ</div>
     <h3>Quản lý duyệt merge</h3>
     <p>Chỉ người có quyền bấm nút cuối. Không ai khác chạm vào <code>main</code>.</p>
   </div>
@@ -149,7 +156,7 @@ slowly and literally. Pause. Then move into why teams trust it.
 ## Không phải con bot tự tung tự tác.
 
 <div class="tiles">
-  <div class="tile g"><div class="ic">⏸</div><h3>Hai cổng duyệt</h3><p>Kế hoạch + merge, không bỏ qua.</p></div>
+  <div class="tile g"><div class="ic">⏸</div><h3>Ba cổng duyệt</h3><p>Kế hoạch + xem thử + merge, không bỏ qua.</p></div>
   <div class="tile"><div class="ic">◇</div><h3>Repo của chính bạn</h3><p>GitHub App an toàn — code không rời repo.</p></div>
   <div class="tile"><div class="ic">◷</div><h3>24/7, không xếp hàng</h3><p>Không ticket, không họp.</p></div>
   <div class="tile"><div class="ic">⌥</div><h3>Nhánh dev an toàn</h3><p>Được test &amp; xem thử trước production.</p></div>
@@ -230,12 +237,43 @@ throwaway change first. Nothing goes live without your tap."
         <div class="bub in"><div class="who">Rio</div>Rõ rồi — CTA sang xanh thương hiệu, to hơn. Đây là kế hoạch — duyệt trước khi tôi ship nhé?</div>
         <div class="approve">⏸ Duyệt kế hoạch</div>
         <div class="bub out">ok, làm luôn đi ✅</div>
-        <div class="bub in"><div class="who">Rio</div>Xong trên <b>dev</b>, test pass. Bản xem thử sẵn sàng 🚀</div>
+        <div class="bub in"><div class="who">Rio</div>Xong trên <b>dev</b>, test pass. Bản xem thử sẵn sàng 🚀 — duyệt nhé?</div>
+        <div class="approve">⏸ Duyệt bản xem thử</div>
+        <div class="bub in"><div class="who">Rio</div>Đã duyệt. Gửi quản lý để merge vào <b>main</b>.</div>
+        <div class="approve mgr">⏸ Duyệt merge · Quản lý</div>
+        <div class="bub in"><div class="who">Rio</div>Đã merge vào <b>main</b>. Đang chạy 🎉</div>
       </div>
     </div>
   </div>
 </div>
 </div>
+
+<script>
+/* Replays the chat animation each time the demo slide becomes active.
+   Marp scopes theme CSS under <section>, but bespoke's active class sits on the
+   ancestor <svg> — unreachable from CSS. So we toggle .is-playing on .gc-body
+   (inside the section) instead, which restarts the staggered CSS animation. */
+(function(){
+  function play(svg){
+    var b = svg.querySelector('.gc-body'); if(!b) return;
+    b.classList.remove('is-playing'); void b.offsetWidth; b.classList.add('is-playing');
+  }
+  function handle(svg){
+    var on = svg.classList.contains('bespoke-marp-active');
+    if(on && svg.querySelector('.gc-body') && !svg._rioOn){ svg._rioOn = 1; play(svg); }
+    else if(!on){ svg._rioOn = 0; }
+  }
+  function init(){
+    document.querySelectorAll('svg.bespoke-marp-slide').forEach(function(svg){
+      new MutationObserver(function(){ handle(svg); })
+        .observe(svg, { attributes:true, attributeFilter:['class'] });
+      handle(svg);
+    });
+  }
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else setTimeout(init, 0);
+})();
+</script>
 
 <!--
 ⏱ 7:30–9:15 — LIVE DEMO (the finale, right before the ask)

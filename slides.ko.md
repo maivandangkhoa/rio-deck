@@ -106,9 +106,11 @@ that maintains your product, with you in charge." Say the tagline out loud.
   <div class="arrow">→</div>
   <div class="node"><div class="dot">5</div><div class="lb">테스트 + 미리보기</div></div>
   <div class="arrow">→</div>
-  <div class="node gate"><div class="dot">6</div><div class="lb">병합 승인</div><div class="who">⏸ 관리자</div></div>
+  <div class="node gate"><div class="dot">6</div><div class="lb">미리보기 승인</div><div class="who">⏸ 당신</div></div>
   <div class="arrow">→</div>
-  <div class="node"><div class="dot">7</div><div class="lb">배포 + 보고</div></div>
+  <div class="node gate"><div class="dot">7</div><div class="lb">병합 승인</div><div class="who">⏸ 관리자</div></div>
+  <div class="arrow">→</div>
+  <div class="node"><div class="dot">8</div><div class="lb">배포 + 보고</div></div>
 </div>
 
 <!--
@@ -119,7 +121,7 @@ That contrast is the whole story.
 
 ---
 
-<span class="eyebrow">두 관문 = 당신의 통제권</span>
+<span class="eyebrow">세 관문 = 당신의 통제권</span>
 
 ## Rio는 절대 무단으로 배포하지 않습니다.
 
@@ -130,7 +132,12 @@ That contrast is the whole story.
     <p>Rio가 한 줄이라도 쓰기 전에 <em>무엇을</em> <em>왜</em> 하는지 봅니다. “ok”라고 답하거나 수정하세요.</p>
   </div>
   <div class="gatecard">
-    <div class="g">⏸ 관문 2 · 관리자</div>
+    <div class="g">⏸ 관문 2 · 당신</div>
+    <h3>당신이 미리보기를 승인</h3>
+    <p>Rio는 먼저 <code>dev</code>에 배포합니다. 미리보기 링크를 열어 맞는지 확인한 뒤 다음 단계로 넘어갑니다.</p>
+  </div>
+  <div class="gatecard">
+    <div class="g">⏸ 관문 3 · 관리자</div>
     <h3>관리자가 병합을 승인</h3>
     <p>권한 있는 사람만 마지막 버튼을 누릅니다. 그 외 누구도 <code>main</code>을 건드리지 않습니다.</p>
   </div>
@@ -149,7 +156,7 @@ slowly and literally. Pause. Then move into why teams trust it.
 ## 제멋대로인 봇이 아닙니다.
 
 <div class="tiles">
-  <div class="tile g"><div class="ic">⏸</div><h3>두 승인 관문</h3><p>계획 + 병합, 생략 없음.</p></div>
+  <div class="tile g"><div class="ic">⏸</div><h3>세 승인 관문</h3><p>계획 + 미리보기 + 병합, 생략 없음.</p></div>
   <div class="tile"><div class="ic">◇</div><h3>당신의 저장소</h3><p>안전한 GitHub App — 코드는 벗어나지 않음.</p></div>
   <div class="tile"><div class="ic">◷</div><h3>24/7, 대기 없음</h3><p>티켓도 회의도 없음.</p></div>
   <div class="tile"><div class="ic">⌥</div><h3>안전한 dev 브랜치</h3><p>운영 전에 테스트 & 미리보기.</p></div>
@@ -230,12 +237,43 @@ throwaway change first. Nothing goes live without your tap."
         <div class="bub in"><div class="who">Rio</div>알겠어요 — CTA를 브랜드 초록색으로, 더 크게. 계획입니다 — 배포 전에 승인해 주실래요?</div>
         <div class="approve">⏸ 계획 승인</div>
         <div class="bub out">네, 진행하세요 ✅</div>
-        <div class="bub in"><div class="who">Rio</div><b>dev</b>에 완료, 테스트 통과. 미리보기 준비됐어요 🚀</div>
+        <div class="bub in"><div class="who">Rio</div><b>dev</b>에 완료, 테스트 통과. 미리보기 준비됐어요 🚀 — 승인해 주실래요?</div>
+        <div class="approve">⏸ 미리보기 승인</div>
+        <div class="bub in"><div class="who">Rio</div>승인됨. <b>main</b> 병합을 위해 관리자에게 보냈어요.</div>
+        <div class="approve mgr">⏸ 병합 승인 · 관리자</div>
+        <div class="bub in"><div class="who">Rio</div><b>main</b>에 병합. 라이브 됐어요 🎉</div>
       </div>
     </div>
   </div>
 </div>
 </div>
+
+<script>
+/* Replays the chat animation each time the demo slide becomes active.
+   Marp scopes theme CSS under <section>, but bespoke's active class sits on the
+   ancestor <svg> — unreachable from CSS. So we toggle .is-playing on .gc-body
+   (inside the section) instead, which restarts the staggered CSS animation. */
+(function(){
+  function play(svg){
+    var b = svg.querySelector('.gc-body'); if(!b) return;
+    b.classList.remove('is-playing'); void b.offsetWidth; b.classList.add('is-playing');
+  }
+  function handle(svg){
+    var on = svg.classList.contains('bespoke-marp-active');
+    if(on && svg.querySelector('.gc-body') && !svg._rioOn){ svg._rioOn = 1; play(svg); }
+    else if(!on){ svg._rioOn = 0; }
+  }
+  function init(){
+    document.querySelectorAll('svg.bespoke-marp-slide').forEach(function(svg){
+      new MutationObserver(function(){ handle(svg); })
+        .observe(svg, { attributes:true, attributeFilter:['class'] });
+      handle(svg);
+    });
+  }
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else setTimeout(init, 0);
+})();
+</script>
 
 <!--
 ⏱ 7:30–9:15 — LIVE DEMO (the finale, right before the ask)
