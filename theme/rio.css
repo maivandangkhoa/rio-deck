@@ -160,3 +160,17 @@ section.close .cta strong{ color:#fff; }
 .in .who{ font-size:11px; font-weight:700; color:#1a73e8; margin-bottom:3px; }
 .approve{ align-self:flex-start; font-size:13px; font-weight:700; color:#7a5200; background:#ffe6a3;
   border:1px solid #f0b646; padding:8px 15px; border-radius:999px; }
+
+/* animated chat — messages type in one-by-one each time this slide is opened.
+   A tiny script in the demo slide adds .is-playing to .gc-body on slide entry,
+   which (re)starts these staggered animations. Without it (PDF/PPTX/PNG export
+   have no JS), bubbles keep their default opacity:1 and render fully. */
+@keyframes gc-in{ from{ opacity:0; transform:translateY(12px) scale(.98); } to{ opacity:1; transform:none; } }
+.gc-body.is-playing > *{ animation:gc-in .5s cubic-bezier(.2,.75,.3,1) both; }
+.gc-body.is-playing > *:nth-child(1){ animation-delay:.20s; }
+.gc-body.is-playing > *:nth-child(2){ animation-delay:.75s; }
+.gc-body.is-playing > *:nth-child(3){ animation-delay:1.55s; }
+.gc-body.is-playing > *:nth-child(4){ animation-delay:2.20s; }
+.gc-body.is-playing > *:nth-child(5){ animation-delay:2.90s; }
+.gc-body.is-playing > *:nth-child(6){ animation-delay:3.70s; }
+@media (prefers-reduced-motion: reduce){ .gc-body.is-playing > *{ animation:none; } }

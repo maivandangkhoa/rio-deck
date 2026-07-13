@@ -244,6 +244,33 @@ throwaway change first. Nothing goes live without your tap."
 </div>
 </div>
 
+<script>
+/* Replays the chat animation each time the demo slide becomes active.
+   Marp scopes theme CSS under <section>, but bespoke's active class sits on the
+   ancestor <svg> — unreachable from CSS. So we toggle .is-playing on .gc-body
+   (inside the section) instead, which restarts the staggered CSS animation. */
+(function(){
+  function play(svg){
+    var b = svg.querySelector('.gc-body'); if(!b) return;
+    b.classList.remove('is-playing'); void b.offsetWidth; b.classList.add('is-playing');
+  }
+  function handle(svg){
+    var on = svg.classList.contains('bespoke-marp-active');
+    if(on && svg.querySelector('.gc-body') && !svg._rioOn){ svg._rioOn = 1; play(svg); }
+    else if(!on){ svg._rioOn = 0; }
+  }
+  function init(){
+    document.querySelectorAll('svg.bespoke-marp-slide').forEach(function(svg){
+      new MutationObserver(function(){ handle(svg); })
+        .observe(svg, { attributes:true, attributeFilter:['class'] });
+      handle(svg);
+    });
+  }
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else setTimeout(init, 0);
+})();
+</script>
+
 <!--
 ⏱ 7:30–9:15 — LIVE DEMO (the finale, right before the ask)
 Do it live if possible: real chat → plan → approve → preview link. Pre-load a
