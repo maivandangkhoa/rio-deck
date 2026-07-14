@@ -100,13 +100,13 @@ that maintains your product, with you in charge." Say the tagline out loud.
   <div class="arrow">→</div>
   <div class="node"><div class="dot">2</div><div class="lb">Rio phân tích</div></div>
   <div class="arrow">→</div>
-  <div class="node gate"><div class="dot">3</div><div class="lb">Duyệt kế hoạch</div><div class="who">⏸ BẠN</div></div>
+  <div class="node gate"><div class="dot">3</div><div class="lb">Duyệt kế hoạch</div><div class="who">⏸ NGƯỜI DÙNG CUỐI</div></div>
   <div class="arrow">→</div>
   <div class="node"><div class="dot">4</div><div class="lb">Code trên dev</div></div>
   <div class="arrow">→</div>
   <div class="node"><div class="dot">5</div><div class="lb">Test + xem thử</div></div>
   <div class="arrow">→</div>
-  <div class="node gate"><div class="dot">6</div><div class="lb">Duyệt bản xem thử</div><div class="who">⏸ BẠN</div></div>
+  <div class="node gate"><div class="dot">6</div><div class="lb">Duyệt bản xem thử</div><div class="who">⏸ NGƯỜI DÙNG CUỐI</div></div>
   <div class="arrow">→</div>
   <div class="node gate"><div class="dot">7</div><div class="lb">Duyệt merge</div><div class="who">⏸ QUẢN LÝ</div></div>
   <div class="arrow">→</div>
@@ -127,13 +127,13 @@ That contrast is the whole story.
 
 <div class="gates">
   <div class="gatecard">
-    <div class="g">⏸ CỔNG 1 · BẠN</div>
-    <h3>Bạn duyệt kế hoạch</h3>
+    <div class="g">⏸ CỔNG 1 · NGƯỜI DÙNG CUỐI</div>
+    <h3>Người dùng cuối duyệt kế hoạch</h3>
     <p>Trước khi Rio viết một dòng, bạn thấy nó sẽ làm <em>gì</em> và <em>vì sao</em>. Trả lời “ok”, hoặc chỉnh lại.</p>
   </div>
   <div class="gatecard">
-    <div class="g">⏸ CỔNG 2 · BẠN</div>
-    <h3>Bạn duyệt bản xem thử</h3>
+    <div class="g">⏸ CỔNG 2 · NGƯỜI DÙNG CUỐI</div>
+    <h3>Người dùng cuối duyệt bản xem thử</h3>
     <p>Rio ship lên <code>dev</code> trước. Bạn mở link xem thử và xác nhận đúng ý trước khi đi tiếp.</p>
   </div>
   <div class="gatecard">
