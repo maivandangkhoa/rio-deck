@@ -93,7 +93,7 @@ that maintains your product, with you in charge." Say the tagline out loud.
 
 <span class="eyebrow">Cách hoạt động — ba cổng cần con người</span>
 
-## Năm bước tự động. Ba bước cần con người.
+## Rio chạy toàn bộ. Ba cổng cần con người.
 
 <div class="flow">
   <div class="node"><div class="dot">1</div><div class="lb">Gửi yêu cầu</div></div>

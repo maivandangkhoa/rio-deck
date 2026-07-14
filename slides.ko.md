@@ -93,7 +93,7 @@ that maintains your product, with you in charge." Say the tagline out loud.
 
 <span class="eyebrow">작동 방식 — 세 개의 사람 관문</span>
 
-## 다섯 단계는 자동. 세 단계는 사람이.
+## Rio가 전체를 실행. 세 관문은 사람이.
 
 <div class="flow">
   <div class="node"><div class="dot">1</div><div class="lb">요청 보내기</div></div>

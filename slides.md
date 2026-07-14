@@ -93,7 +93,7 @@ that maintains your product, with you in charge." Say the tagline out loud.
 
 <span class="eyebrow">How it works — three human gates</span>
 
-## Five steps automatic. Three need a human.
+## Rio runs the flow. Three gates need a human.
 
 <div class="flow">
   <div class="node"><div class="dot">1</div><div class="lb">Send request</div></div>
