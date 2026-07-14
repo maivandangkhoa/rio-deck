@@ -91,9 +91,9 @@ that maintains your product, with you in charge." Say the tagline out loud.
 
 ---
 
-<span class="eyebrow">작동 방식 — 두 관문은 당신 몫</span>
+<span class="eyebrow">작동 방식 — 세 개의 사람 관문</span>
 
-## 다섯 단계는 자동. 두 단계는 당신.
+## 다섯 단계는 자동. 세 단계는 사람이.
 
 <div class="flow">
   <div class="node"><div class="dot">1</div><div class="lb">요청 보내기</div></div>
@@ -112,18 +112,6 @@ that maintains your product, with you in charge." Say the tagline out loud.
   <div class="arrow">→</div>
   <div class="node"><div class="dot">8</div><div class="lb">배포 + 보고</div></div>
 </div>
-
-<!--
-⏱ 3:00–4:30 — THE FLOW
-Don't narrate all 7. "Five are automatic. Two are yours" — point at 3 and 6.
-That contrast is the whole story.
--->
-
----
-
-<span class="eyebrow">세 관문 = 당신의 통제권</span>
-
-## Rio는 절대 무단으로 배포하지 않습니다.
 
 <div class="gates">
   <div class="gatecard">
@@ -144,9 +132,10 @@ That contrast is the whole story.
 </div>
 
 <!--
-⏱ 4:30–5:15 — TRUST (objection-killer)
-This slide disarms the #1 fear: "AI touching our live code." Say the headline
-slowly and literally. Pause. Then move into why teams trust it.
+⏱ 3:00–5:15 — THE FLOW + THE GATES (also the objection-killer)
+Walk the row once: five steps are automatic; the three gold circles are human
+approvals — two are the end user's (3 & 6), the last a manager's (7). Then land
+it: Rio never ships unattended, ever. Pause before moving on.
 -->
 
 ---

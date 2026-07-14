@@ -91,9 +91,9 @@ that maintains your product, with you in charge." Say the tagline out loud.
 
 ---
 
-<span class="eyebrow">How it works — two gates are yours</span>
+<span class="eyebrow">How it works — three human gates</span>
 
-## Five steps automatic. Two are yours.
+## Five steps automatic. Three need a human.
 
 <div class="flow">
   <div class="node"><div class="dot">1</div><div class="lb">Send request</div></div>
@@ -112,18 +112,6 @@ that maintains your product, with you in charge." Say the tagline out loud.
   <div class="arrow">→</div>
   <div class="node"><div class="dot">8</div><div class="lb">Ship + report</div></div>
 </div>
-
-<!--
-⏱ 3:00–4:30 — THE FLOW
-Don't narrate all 8. "Five are automatic. Two are yours" — point at 3 and 6
-(your gates), 7 is your manager's. That contrast is the whole story.
--->
-
----
-
-<span class="eyebrow">The three gates = your control</span>
-
-## Rio never ships unattended. Ever.
 
 <div class="gates">
   <div class="gatecard">
@@ -144,9 +132,10 @@ Don't narrate all 8. "Five are automatic. Two are yours" — point at 3 and 6
 </div>
 
 <!--
-⏱ 4:30–5:15 — TRUST (objection-killer)
-This slide disarms the #1 fear: "AI touching our live code." Say the headline
-slowly and literally. Pause. Then move into why teams trust it.
+⏱ 3:00–5:15 — THE FLOW + THE GATES (also the objection-killer)
+Walk the row once: five steps are automatic; the three gold circles are human
+approvals — two are the end user's (3 & 6), the last a manager's (7). Then land
+it: Rio never ships unattended, ever. Pause before moving on.
 -->
 
 ---

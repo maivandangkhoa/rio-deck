@@ -91,9 +91,9 @@ that maintains your product, with you in charge." Say the tagline out loud.
 
 ---
 
-<span class="eyebrow">Cách hoạt động — hai cổng là của bạn</span>
+<span class="eyebrow">Cách hoạt động — ba cổng cần con người</span>
 
-## Năm bước tự động. Hai bước là của bạn.
+## Năm bước tự động. Ba bước cần con người.
 
 <div class="flow">
   <div class="node"><div class="dot">1</div><div class="lb">Gửi yêu cầu</div></div>
@@ -112,18 +112,6 @@ that maintains your product, with you in charge." Say the tagline out loud.
   <div class="arrow">→</div>
   <div class="node"><div class="dot">8</div><div class="lb">Ship + báo cáo</div></div>
 </div>
-
-<!--
-⏱ 3:00–4:30 — THE FLOW
-Don't narrate all 7. "Five are automatic. Two are yours" — point at 3 and 6.
-That contrast is the whole story.
--->
-
----
-
-<span class="eyebrow">Ba cổng duyệt = quyền kiểm soát</span>
-
-## Rio không bao giờ tự ý ship. Không bao giờ.
 
 <div class="gates">
   <div class="gatecard">
@@ -144,9 +132,10 @@ That contrast is the whole story.
 </div>
 
 <!--
-⏱ 4:30–5:15 — TRUST (objection-killer)
-This slide disarms the #1 fear: "AI touching our live code." Say the headline
-slowly and literally. Pause. Then move into why teams trust it.
+⏱ 3:00–5:15 — THE FLOW + THE GATES (also the objection-killer)
+Walk the row once: five steps are automatic; the three gold circles are human
+approvals — two are the end user's (3 & 6), the last a manager's (7). Then land
+it: Rio never ships unattended, ever. Pause before moving on.
 -->
 
 ---
