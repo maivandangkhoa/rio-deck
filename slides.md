@@ -79,7 +79,7 @@ in a queue right now?" Wait 3 seconds, acknowledge, move on. The nods sell it.
 
 </div>
 <div style="text-align:center">
-  <img src="assets/robot.svg" alt="Rio" style="width:200px;height:200px;border-radius:44px;box-shadow:0 0 70px 8px rgba(124,127,248,.4)">
+  <img src="assets/robot.svg" alt="Rio" style="width:200px;height:200px;border-radius:44px;box-shadow:0 0 70px 8px rgba(34,197,94,.4)">
 </div>
 </div>
 
