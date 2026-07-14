@@ -129,12 +129,12 @@ Don't narrate all 8. "Five are automatic. Two are yours" — point at 3 and 6
   <div class="gatecard">
     <div class="g">⏸ GATE 1 · END USER</div>
     <h3>End user approves the plan</h3>
-    <p>Before Rio writes a single line, you see <em>what</em> it will do and <em>why</em>. Reply “ok”, or refine it.</p>
+    <p>Before Rio writes a single line, the end user sees <em>what</em> it will do and <em>why</em> — and replies “ok”, or refines it.</p>
   </div>
   <div class="gatecard">
     <div class="g">⏸ GATE 2 · END USER</div>
     <h3>End user approves the dev preview</h3>
-    <p>Rio ships to <code>dev</code> first. You open the preview link and confirm it’s right before anything goes further.</p>
+    <p>Rio ships to <code>dev</code> first. The end user opens the preview link and confirms it’s right before anything goes further.</p>
   </div>
   <div class="gatecard">
     <div class="g">⏸ GATE 3 · MANAGER</div>
