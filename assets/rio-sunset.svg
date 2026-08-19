@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+<title id="title">Rio Sunset</title>
+<desc id="desc">A stylized sunset over the sea with a suspension bridge and city skyline.</desc>
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#392b67"/><stop offset="0.55" stop-color="#e46f57"/><stop offset="1" stop-color="#ffb34d"/></linearGradient>
+  <linearGradient id="water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#35506a"/><stop offset="1" stop-color="#142b3d"/></linearGradient>
+  <radialGradient id="sun"><stop offset="0" stop-color="#fff7bd"/><stop offset="0.45" stop-color="#ffd45c"/><stop offset="1" stop-color="#ff9d3d" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1200" height="675" fill="url(#sky)"/>
+<circle cx="610" cy="340" r="150" fill="url(#sun)"/>
+<circle cx="610" cy="340" r="42" fill="#fff1a3"/>
+<rect y="405" width="1200" height="270" fill="url(#water)"/>
+<path d="M0 480 Q120 460 240 485 T480 480 T720 490 T960 475 T1200 485 V675 H0Z" fill="#173347" opacity=".75"/>
+<g fill="#162637">
+  <rect x="35" y="330" width="42" height="75"/><rect x="84" y="300" width="55" height="105"/><rect x="145" y="345" width="36" height="60"/><rect x="187" y="285" width="65" height="120"/><rect x="260" y="320" width="48" height="85"/>
+  <rect x="940" y="345" width="45" height="60"/><rect x="995" y="310" width="55" height="95"/><rect x="1060" y="335" width="42" height="70"/><rect x="1112" y="295" width="58" height="110"/>
+</g>
+<g fill="none" stroke="#d7dce0" stroke-width="9">
+  <path d="M100 405 H1110"/>
+  <path d="M275 405 V235 M875 405 V235"/>
+  <path d="M275 235 C405 390 745 390 875 235" stroke-width="7"/>
+  <path d="M315 252 C420 355 730 355 835 252" stroke-width="3" opacity=".7"/>
+</g>
+<g stroke="#d7dce0" stroke-width="3">
+  <path d="M325 270 V405 M375 300 V405 M425 325 V405 M475 342 V405 M525 353 V405 M575 360 V405 M625 360 V405 M675 353 V405 M725 342 V405 M775 325 V405 M825 300 V405"/>
+</g>
+<path d="M545 505 Q610 470 675 505 L650 535 Q610 515 570 535Z" fill="#f4b84f" opacity=".8"/>
+<g fill="#0b1c29"><ellipse cx="95" cy="575" rx="70" ry="28"/><ellipse cx="1100" cy="590" rx="95" ry="35"/><ellipse cx="850" cy="635" rx="110" ry="32"/></g>
+</svg>
