@@ -1,0 +1,36 @@
+name: Seoul News Bot
+
+on:
+  schedule:
+    - cron: '0 8 * * *'
+      timezone: 'Asia/Seoul'
+  workflow_dispatch:
+
+jobs:
+  send-news:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: bots/seoul-news-bot
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Send Seoul news
+        env:
+          CHANNELS: ${{ secrets.NEWS_CHANNELS }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+          ZALO_WEBHOOK_URL: ${{ secrets.ZALO_WEBHOOK_URL }}
+        run: python news_bot.py
